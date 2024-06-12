@@ -1,8 +1,6 @@
 server:
   port: 8102
 
-
-
 shq:
   security:
     user:

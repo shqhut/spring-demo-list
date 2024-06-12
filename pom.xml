@@ -20,6 +20,7 @@
         <module>javase-demo</module>
         <module>spring-security-demo</module>
         <module>dataStructure</module>
+        <module>security-basic</module>
     </modules>
 
 
@@ -69,5 +70,17 @@
         </dependencies>
 
     </dependencyManagement>
+
+    <!--  配置中央仓库  -->
+    <repositories>
+        <repository>
+            <id>aliyun-repos</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 
 </project>

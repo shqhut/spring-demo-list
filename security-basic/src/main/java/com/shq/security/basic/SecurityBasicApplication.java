@@ -1,13 +1,13 @@
-package com.shq.demo.product;
+package com.shq.security.basic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProductApplication {
+public class SecurityBasicApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProductApplication.class,args);
+        SpringApplication.run(SecurityBasicApplication.class);
     }
 
 }

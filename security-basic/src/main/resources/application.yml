@@ -1,0 +1,9 @@
+server:
+  port: 9001
+
+spring:
+  security:
+    user:
+      name: shq
+      password: 123456
+      roles: ADMIN
