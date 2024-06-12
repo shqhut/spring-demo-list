@@ -1,0 +1,19 @@
+server:
+  port: 8012
+spring:
+  application:
+    name: order-feign-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.2.0.105:8848
+        namespace: cloud-demo
+logging:
+  level:
+    com.shq.demo.orderFeign.feign: debug
+
+feign:
+  client:
+    config:
+      stock-demo:
+        logger-level: HEADERS

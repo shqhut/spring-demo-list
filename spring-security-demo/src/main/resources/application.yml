@@ -1,0 +1,41 @@
+server:
+  port: 8102
+
+
+
+shq:
+  security:
+    user:
+      name: shq
+      password: 123456
+      roles: ADMIN
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.2.0.105:3306/seata_demo?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: Password123@wayzdeck.mysql
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+#  security:
+#    user:
+#      name: shq
+#      password: 123456
+#      roles: ADMIN
+
+# 设置mybatis
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  typeAliasesPackage: com.shq.security.pojo
+  configuration:
+    mapUnderscoreToCamelCase: true

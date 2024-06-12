@@ -1,0 +1,31 @@
+### 解题思路
+
+、
+这道题目自己拿到的时候完全没有思路（虽然是简单题），自己可以写出快乐数的运算过程，但是对于如何判断没有思路。
+
+刚开始想到的和官方题解下评论一样，暴力循环？但对于可能的循环次数也没有头绪，也就没有下手。
+
+官方题解中比较巧妙地利用了快慢指针，两者要么无限循环，这时候形成环，快慢指针一定会碰面，要么变为1，结束循环。真的好巧妙……
+
+### 代码
+
+* python3
+
+```python
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        def squareSum(num):
+            res = 0
+            while num:
+                res += (num % 10) ** 2
+                num = num // 10
+            return res
+        
+        slow = n
+        fast = squareSum(n)
+        while fast != 1 and fast != slow:
+            slow = squareSum(slow)
+            fast = squareSum(squareSum(fast))
+        return fast == 1
+```
+

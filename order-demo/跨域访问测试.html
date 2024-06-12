@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    <div >
+        <h1>ajax跨域访问测试</h1>
+    </div>
+    <input type="button" value="用户列表" onclick="getData()">
+    <script>
+        function getData() {
+            $.get('http://localhost:8101/order-service/order/testCors',function(data){
+                alert(data)
+            });
+        }
+    </script>
+</body>
+</html>

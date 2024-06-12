@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shq.security.mapper.PermissionMapper">
+
+    <select id="getByUserName" resultType="User" parameterType="string">
+        select * from tb_user where username = #{name};
+    </select>
+
+    <select id="getRoleByUserId" resultType="Role" parameterType="long">
+        select r.id
+             ,r.parent_id
+             ,r.name
+             ,r.enname
+             ,r.description
+        from tb_user_role as ur
+                 join tb_role as r on ur.role_id = r.id
+        where ur.user_id = #{userId};
+    </select>
+
+
+</mapper>

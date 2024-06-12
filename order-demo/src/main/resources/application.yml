@@ -1,0 +1,11 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: order-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.2.0.105:8848
+        namespace: cloud-demo
+

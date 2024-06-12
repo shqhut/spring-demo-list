@@ -1,0 +1,11 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: stock-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.2.0.105:8848
+        namespace: cloud-demo
